@@ -1,6 +1,7 @@
-import { FETCH_POSTS, NEW_POSTS } from '../actions/types';
+import { FETCH_POSTS } from '../action/types';
 
 export const fetchPosts = () => dispatch => {
+  console.log('postAction')
   fetch('http://jsonplaceholder.typicode.com/posts')
     .then(res => res.json())
     .then(posts => dispatch({
